@@ -79,6 +79,7 @@ bot.on('message', message => {
             message.channel.send("Processing... Results will be sent in about 15 seconds.");
             async function scrapeRunes(url, callback) {
                 let browser = await puppeteer.launch({
+                    headless: true,
                     args: [
                       '--no-sandbox',
                       '--disable-setuid-sandbox',
@@ -127,6 +128,7 @@ bot.on('message', message => {
 
             async function scrapeStats(url, callback) {
                 let browser = await puppeteer.launch({
+                    headless: true,
                     args: [
                       '--no-sandbox',
                       '--disable-setuid-sandbox',
