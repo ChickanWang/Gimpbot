@@ -4,7 +4,7 @@ const ytdl = require("ytdl-core");
 const bot = new Discord.Client();
 const puppeteer = require('puppeteer');
 
-const token = process.env.token;
+const token = 'NzI3NjA4MzAzMTI2ODM5MzU2.XvuUCQ.v4p7mJTJ0HcuvTidrvf6_tmvECI';
 const PREFIX = 'gimpbot ';
 const videos = {};
 
@@ -78,7 +78,12 @@ bot.on('message', message => {
         case 'runes':
             message.channel.send("Processing... Results will be sent in about 15 seconds.");
             async function scrapeRunes(url, callback) {
-                let browser = await puppeteer.launch();
+                let browser = await puppeteer.launch({
+                    args: [
+                      '--no-sandbox',
+                      '--disable-setuid-sandbox',
+                    ],
+                  });
                 let page = await browser.newPage();
                 await page.goto(url, { waitUntil: 'networkidle2' });
 
@@ -121,7 +126,12 @@ bot.on('message', message => {
             message.channel.send("Processing... Results will be sent in about 15 seconds.");
 
             async function scrapeStats(url, callback) {
-                let browser = await puppeteer.launch();
+                let browser = await puppeteer.launch({
+                    args: [
+                      '--no-sandbox',
+                      '--disable-setuid-sandbox',
+                    ],
+                  });
                 let page = await browser.newPage();
                 await page.goto(url, { waitUntil: 'networkidle2' });
 
