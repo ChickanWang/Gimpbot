@@ -1,11 +1,10 @@
 const Discord = require('discord.js');
 const yts = require('yt-search');
 const ytdl = require("ytdl-core");
-const scraper = require('./scraper.js');
 const bot = new Discord.Client();
 const puppeteer = require('puppeteer');
 
-const token = process.env.token;
+const token = 'NzI3NjA4MzAzMTI2ODM5MzU2.XwfCpQ.VlKm0RKOoKoLPex7sHxQ6t8k0WM';
 const PREFIX = 'gimpbot ';
 const videos = {};
 
