@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const yts = require('yt-search');
-const ytdl = require("ytdl-core");
+const ytdl = require("ytdl-core-discord");
 const bot = new Discord.Client();
 const puppeteer = require('puppeteer');
 
