@@ -109,6 +109,7 @@ bot.on('message', message => {
                     return runes;
                 });
 
+                await browser.close();
                 callback(data);
             }
 
@@ -232,6 +233,7 @@ bot.on('message', message => {
                     return stats;
                 });
 
+                await browser.close();
                 callback(data);
             }
 
