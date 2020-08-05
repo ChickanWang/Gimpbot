@@ -26,5 +26,6 @@
   "bugs": {
     "url": "https://github.com/ChickanWang/Gimpbot/issues"
   },
-  "homepage": "https://github.com/ChickanWang/Gimpbot#readme"
+  "homepage": "https://github.com/ChickanWang/Gimpbot#readme",
+  "keywords": []
 }
