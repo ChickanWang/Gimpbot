@@ -9,9 +9,9 @@
     "cheerio": "^1.0.0-rc.3",
     "discord.js": "^12.3.1",
     "node-opus": "^0.3.3",
-    "puppeteer": "^5.2.1",
-    "yt-search": "^2.3.0",
-    "ytdl-core": "^3.2.2"
+    "puppeteer": "^5.5.0",
+    "yt-search": "^2.5.1",
+    "ytdl-core": "^4.4.0"
   },
   "devDependencies": {},
   "scripts": {
