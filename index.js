@@ -4,7 +4,7 @@ const ytdl = require('ytdl-core');
 const bot = new Discord.Client();
 const puppeteer = require('puppeteer');
 
-const token = "NzI3NjA4MzAzMTI2ODM5MzU2.XvuUCQ.A1XIa3rgoyL-nxoHtf18XHWscLg";
+const token = process.env.TOKEN;
 const PREFIX = 'gimpbot ';
 const videos = {};
 
@@ -131,7 +131,6 @@ bot.on('message', message => {
             scrapeRunes(url, function (data) {
                 message.channel.send(data);
             });
-            console.log(search);
             break;
 
         case 'help':
