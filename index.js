@@ -4,7 +4,7 @@ const ytdl = require('ytdl-core');
 const bot = new Discord.Client();
 const puppeteer = require('puppeteer');
 
-const token = 'NzI3NjA4MzAzMTI2ODM5MzU2.XvuUCQ.fOcG187NxHGeycrzdlF0fF16m6c';
+const token = process.env.TOKEN;
 const PREFIX = 'gimpbot ';
 const videos = {};
 
