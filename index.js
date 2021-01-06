@@ -4,7 +4,7 @@ const ytdl = require('ytdl-core');
 const bot = new Discord.Client();
 const puppeteer = require('puppeteer');
 
-const token = process.env.TOKEN;
+const token = 'NzI3NjA4MzAzMTI2ODM5MzU2.XvuUCQ.fOcG187NxHGeycrzdlF0fF16m6c';
 const PREFIX = 'gimpbot ';
 const videos = {};
 
@@ -86,7 +86,7 @@ bot.on('message', message => {
             message.channel.send("Processing... Results will be sent in about 15 seconds.");
             async function scrapeRunes(url, callback) {
                 let browser = await puppeteer.launch({
-                    headless: true,
+                    headless: false,
                     args: [
                       '--no-sandbox',
                       '--disable-setuid-sandbox',
@@ -94,6 +94,8 @@ bot.on('message', message => {
                   });
 
                 let page = await browser.newPage();
+
+                await page.setDefaultNavigationTimeout(0);
                 await page.goto(url, { waitUntil: 'networkidle2' });
 
                 data = await page.evaluate(async function evaluate() {
@@ -120,9 +122,10 @@ bot.on('message', message => {
                     }
 
                     return runes;
-                });
+                })
 
-                await browser.close();
+                await browser.close()
+
                 callback(data);
             }
 
