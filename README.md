@@ -6,9 +6,9 @@ It has 2 main features:
 
 # Commands
 Gimpbot has 3 commands: play, stop, runes
-gimpbot play ___ : Gimpbot joins the voice channel you are currently in and plays what you search for from Youtube.
-gimpbot stop : Gimpbot leaves the voice channel and stops playing music.
-gimpbot runes ___ : Gimpbot scrapes data from champion.gg and finds the runes with the highest winrate for the specified champion.
+1. gimpbot play ___ : Gimpbot joins the voice channel you are currently in and plays what you search for from Youtube.
+2. gimpbot stop : Gimpbot leaves the voice channel and stops playing music.
+3. gimpbot runes ___ : Gimpbot scrapes data from champion.gg and finds the runes with the highest winrate for the specified champion.
 
 Add Gimpbot to your server [here](https://discord.com/oauth2/authorize?client_id=727608303126839356&scope=bot) and test it out!
 
